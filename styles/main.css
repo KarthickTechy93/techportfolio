@@ -38,6 +38,7 @@
   left: 0;
   right: 0;
   opacity: 0;
+  font-size: 1.8rem;
   transition: opacity 0.5s ease;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
@@ -800,8 +801,33 @@ h3 { font-size: 1.75rem; }
 	
 	.hero-content {
         padding-right: 0;
+		font-size: 200px;
         text-align: center;
     }
+	
+	.hero-content h1 {
+        padding-right: 0;
+		font-weight: 500px;
+        text-align: center;
+    }
+	
+	.highlight {
+		font-size: 1.8rem; /* Slightly smaller than h1 */
+	}
+  
+	.rotating-title .title {
+		font-size: 1.2rem; /* Smaller rotating titles */
+		white-space: normal; /* Ensure text wraps properly */
+		word-break: keep-all;
+	}
+	
+	.rotating-container {
+		min-height: 2.5rem; /* Adjust based on your mobile font size */
+	}
+  
+	.hero-content p {
+		font-size: 0.9rem; /* Optional: make paragraph smaller too */
+	}
     
     .cta-buttons {
         justify-content: center;
@@ -1115,6 +1141,7 @@ h3 { font-size: 1.75rem; }
 	.blog-title {
         font-size: 1.3rem;
     }
+	
         
     .blog-description {
         font-size: 0.9rem;
