@@ -816,13 +816,20 @@ h3 { font-size: 1.75rem; }
 	}
   
 	.rotating-title .title {
-		font-size: 1.2rem; /* Smaller rotating titles */
-		white-space: normal; /* Ensure text wraps properly */
-		word-break: keep-all;
+		font-size: 1.2rem;
+		white-space: normal; /* Allow text to wrap */
+		word-break: normal; /* Change from keep-all to normal */
+		display: inline-block; /* Helps with wrapping */
+		max-width: 100%; /* Prevent overflow */
+		line-height: 1.4; /* Better readability */
 	}
 	
 	.rotating-container {
-		min-height: 2.5rem; /* Adjust based on your mobile font size */
+		min-height: auto; /* Remove fixed height */
+		height: auto; /* Allow natural height */
+		display: inline-block; /* Better for text wrapping */
+		width: 100%; /* Take full width */
+		text-align: center; /* Center the text */
 	}
   
 	.hero-content p {
@@ -1192,6 +1199,11 @@ h3 { font-size: 1.75rem; }
         word-break: break-word;
         max-width: 100%;
     }
+	
+	.rotating-title .title {
+		font-size: 1rem; /* Even smaller font */
+		line-height: 1.5; /* More spacing */
+	}
     
     .title {
         display: inline;
