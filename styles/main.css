@@ -23,6 +23,7 @@
   min-height: 60px; /* Prevents layout shift */
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .rotating-title {
@@ -30,6 +31,7 @@
   display: inline-block; 
   overflow: visible; 
   text-overflow: clip;
+  text-align:center;
   width: 100%;
   vertical-align: middle;
   font-size: clamp(1rem, 4vw, 1.8rem);
@@ -44,6 +46,10 @@
   transition: opacity 0.5s ease;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  width: 100%;
+  text-align: center;
+  white-space: normal;
+  word-break: normal;
 }
 
 .rotating-title .title.active {
@@ -829,7 +835,7 @@ h3 { font-size: 1.75rem; }
 		font-size: 1.2rem;
 		white-space: normal; /* Allow text to wrap */
 		word-break: normal; /* Change from keep-all to normal */
-		display: inline; /* Helps with wrapping */
+		display: inline-block; /* Helps with wrapping */
 		max-width: 100%; /* Prevent overflow */
 		line-height: 1.4; /* Better readability */
 		padding: 0 5px;
@@ -841,6 +847,7 @@ h3 { font-size: 1.75rem; }
 		display: inline-block; /* Better for text wrapping */
 		width: 100%; /* Take full width */
 		text-align: center; /* Center the text */
+		padding: 0 15px;
 	}
   
 	.hero-content p {
