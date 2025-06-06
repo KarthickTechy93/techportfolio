@@ -32,6 +32,7 @@
   text-overflow: clip;
   width: 100%;
   vertical-align: middle;
+  font-size: clamp(1rem, 4vw, 1.8rem);
 }
 
 .rotating-title .title {
