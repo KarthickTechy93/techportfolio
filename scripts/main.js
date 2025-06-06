@@ -188,15 +188,29 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   const rotatingTitle = document.querySelector('.rotating-title');
   const titles = Array.from(rotatingTitle.querySelectorAll('.title'));
-  const baseText = "";
   let currentIndex = 0;
   
   // Initial setup
-  rotatingTitle.textContent = baseText + titles[0].textContent;
-  titles[0].classList.add('active');
+  titles.forEach((title, index) => {
+    title.style.display = index === 0 ? 'inline-block' : 'none';
+    title.style.opacity = index === 0 ? '1' : '0';
+  });
   
-  setInterval(() => {
+  function rotateText() {
+    // Hide current title
+    titles[currentIndex].style.display = 'none';
+    titles[currentIndex].style.opacity = '0';
+    
+    // Move to next title
     currentIndex = (currentIndex + 1) % titles.length;
-    rotatingTitle.textContent = baseText + titles[currentIndex].textContent;
-  }, 2000);
+    
+    // Show new title
+    titles[currentIndex].style.display = 'inline-block';
+    setTimeout(() => {
+      titles[currentIndex].style.opacity = '1';
+    }, 10);
+  }
+  
+  // Start rotation
+  setInterval(rotateText, 2000);
 });
