@@ -816,7 +816,7 @@ h3 { font-size: 1.75rem; }
 	}
   
 	.rotating-title .title {
-		font-size: 1.2rem; /* Smaller rotating titles */
+		font-size: 0.8rem; /* Smaller rotating titles */
 		white-space: normal; /* Ensure text wraps properly */
 		word-break: keep-all;
 	}
