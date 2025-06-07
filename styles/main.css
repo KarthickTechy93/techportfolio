@@ -796,7 +796,15 @@ h3 { font-size: 1.75rem; }
     .hero .container {
         flex-direction: column;
         text-align: center;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
     }
+	
+	.hero {
+    /* Adjust overall hero section spacing */
+		padding-top: 3rem; /* Reduced from 5rem */
+		min-height: auto;
+	}
 	
 	.logo {
         height: 36px; /* Slightly smaller for mobile */
@@ -809,19 +817,25 @@ h3 { font-size: 1.75rem; }
 	
 	.hero-content {
         padding-right: 0;
-		font-size: 200px;
+		font-size: 1rem;
         text-align: center;
-		padding: 0 15px;
+		padding-top: 0;
+		margin-top: 0;
     }
 	
 	.hero-content h1 {
         padding-right: 0;
-		font-weight: 500px;
+		font-weight: 500;
         text-align: center;
+		margin-bottom: 0.25rem; /* Reduced from default */
+		font-size: 2rem;
+		line-height: 1.2;
     }
 	
 	.highlight {
 		font-size: 2rem; /* Slightly smaller than h1 */
+		display: inline-block;
+		line-height: 1;
 	}
 	
 	.rotating-title {
@@ -832,13 +846,14 @@ h3 { font-size: 1.75rem; }
 	}
   
 	.rotating-title .title {
-		font-size: 1.2rem;
+		font-size: 2rem;
 		white-space: normal; /* Allow text to wrap */
 		word-break: normal; /* Change from keep-all to normal */
 		display: inline-block; /* Helps with wrapping */
 		max-width: 100%; /* Prevent overflow */
-		line-height: 1.4; /* Better readability */
-		padding: 0 5px;
+		padding: 0;
+		margin: 0;
+		line-height:1.2;
 	}
 	
 	.rotating-container {
@@ -847,15 +862,19 @@ h3 { font-size: 1.75rem; }
 		display: inline-block; /* Better for text wrapping */
 		width: 100%; /* Take full width */
 		text-align: center; /* Center the text */
-		padding: 0 15px;
+		padding: 0;
+		margin: 0; /* Adjust as needed */
+		min-height: auto;
 	}
   
 	.hero-content p {
 		font-size: 0.9rem; /* Optional: make paragraph smaller too */
+		margin-top: 1rem;
 	}
     
     .cta-buttons {
         justify-content: center;
+		margin-top: 1.5rem;
     }
     
     .profile-image-container {
@@ -1219,8 +1238,8 @@ h3 { font-size: 1.75rem; }
     }
 	
 	.rotating-title .title {
-		font-size: 1rem; /* Even smaller font */
-		line-height: 1.5; /* More spacing */
+		font-size: 1.5rem; /* Even smaller font */
+		line-height: 0.8; /* More spacing */
 	}
     
     .title {
@@ -1229,15 +1248,15 @@ h3 { font-size: 1.75rem; }
 }
 
 .app-dev {
-  color: #6C63FF; /* Purple */
+  color: #FFFFFF; /* Purple */
 }
 
 .content-creator {
-  color: #FF6584; /* Pink */
+  color: #7AFFFF; /* Pink */
 }
 
 .youtuber {
-  color: #FF0000; /* YouTube red */
+  color: #5FBF97; /* YouTube red */
 }
 
 /* YouTube Section - Matching Blog Section */
