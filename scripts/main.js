@@ -103,34 +103,27 @@ if (contactForm) {
 }
 
 // Welcome Popup - Fixed Version
+// Welcome Popup - Fixed Version
 document.addEventListener('DOMContentLoaded', () => {
     const welcomePopup = document.getElementById('welcomePopup');
     const closePopupBtn = document.getElementById('closePopup');
     
     if (!welcomePopup) return; // Exit if no popup exists
     
-    // Only show popup if it's the first visit or after a certain period
-    const lastVisit = localStorage.getItem('lastVisit');
-    const now = new Date().getTime();
-    const oneWeek = 7 * 24 * 60 * 60 * 1000;
+    // Always show the popup (removed the lastVisit check)
+    setTimeout(() => {
+        welcomePopup.classList.add('active');
+    }, 1000);
     
-    if (!lastVisit || (now - lastVisit) > oneWeek) {
-        setTimeout(() => {
-            welcomePopup.classList.add('active');
-        }, 1000);
-    }
-    
-    // Close popup and record visit
+    // Close popup
     closePopupBtn?.addEventListener('click', () => {
         welcomePopup.classList.remove('active');
-        localStorage.setItem('lastVisit', now.toString());
     });
     
     // Also close when clicking outside content
     welcomePopup.addEventListener('click', (e) => {
         if (e.target === welcomePopup) {
             welcomePopup.classList.remove('active');
-            localStorage.setItem('lastVisit', now.toString());
         }
     });
 });
