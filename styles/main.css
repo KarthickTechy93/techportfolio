@@ -1240,6 +1240,7 @@ h3 { font-size: 1.75rem; }
 	.rotating-title .title {
 		font-size: 1.4rem; /* Even smaller font */
 		line-height: 0.9; /* More spacing */
+		font-family: 'Playfair Display', serif; 
 	}
     
     .title {
